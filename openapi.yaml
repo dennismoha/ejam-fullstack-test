@@ -1,0 +1,105 @@
+openapi: 3.0.1
+info:
+  title: Humble Superhero API
+  description: An API to manage superheroes, including their names, superpowers, and humility scores.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8081
+    description: Local development server
+
+paths:
+  /superheroes:
+    get:
+      summary: Retrieve all superheroes
+      description: Fetch a list of all superheroes, sorted by humility score in descending order.
+      operationId: getSuperheroes
+      responses:
+        "200":
+          description: A list of superheroes sorted by humility score
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Superhero"
+        "500":
+          description: Internal server error
+
+    post:
+      summary: Add a new superhero
+      description: Adds a superhero with a name, superpower, and humility score.
+      operationId: addSuperhero
+      requestBody:
+        description: The superhero object to be added.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewSuperhero"
+      responses:
+        "201":
+          description: Superhero created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Superhero"
+        "400":
+          description: Bad request (e.g., validation error)
+        "500":
+          description: Internal server error     
+
+components:
+  schemas:
+    Superhero:
+      type: object
+      required:
+        - id
+        - name
+        - superpower
+        - humilityScore
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: "Superman"
+        superpower:
+          type: string
+          example: "Flight"
+        humilityScore:
+          type: integer
+          description: The humility score of the superhero (1-10).
+          example: 9
+          minimum: 1
+          maximum: 10
+
+    NewSuperhero:
+      type: object
+      required:
+        - name
+        - superpower
+        - humilityScore
+      properties:
+        name:
+          type: string
+          example: "Superman"
+        superpower:
+          type: string
+          example: "Flight"
+        humilityScore:
+          type: integer
+          description: The humility score of the superhero (1-10).
+          example: 9
+          minimum: 1
+          maximum: 10
+
+  responses:
+    BadRequest:
+      description: Invalid request input
+    InternalServerError:
+      description: Unexpected internal server error
+
+tags:
+  - name: Superheroes
+    description: Operations related to superheroes
