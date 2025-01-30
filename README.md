@@ -10,7 +10,7 @@ The project follows a **feature-based** folder structure, where each feature is 
 The `src` folder contains all the application logic and configurations. it is found on the root of the project. it contains the following folders
 
 - **`features/` Folder**  
-  This folder contains individual feature folders. Each feature represents a specific business domain in your application, such as "categories," "products," or "suppliers." Within each feature folder, the following subfolders and files are defined:
+  This folder contains individual feature folders. Each feature represents a specific business domain in your application, such as "superheros," etc or any other new feature.." Within each feature folder, the following subfolders and files are defined:
 
   - **`controller/`**  
     Contains the business logic for that feature. Controllers handle the operations and data manipulations for that feature. Controllers interact with the models and return appropriate responses. in our case we have an in memory app but if we were to extend the application to use a proper database like postgreql, this is where we would interact with the db.
