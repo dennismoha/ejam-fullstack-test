@@ -8,6 +8,14 @@ If I had more time, I would:
 - add PM2 for scaling the processes incase the application grows bigger.
 - Expand the application, add more features. the application is written in a feature based style so adding new features can be easier
 - would have added a release branch and added that to our ci/cd to track the release versions
+- Here's an improved version of your explanation, making it more concise and clear:
+- If I had more time, I would have implemented the client-side using **Next.js**. For state management and API calls, I would have used **Redux Toolkit (RTK)** due to its powerful features:
+
+  - **Cache Tag Invalidation**: RTK provides automatic cache invalidation, which ensures that the UI stays up-to-date without requiring manual refreshes.
+  - **Optimized API Calls**: With RTK’s built-in hooks, fetching and managing data becomes seamless and efficient, reducing boilerplate code.
+  - **Auto-Refreshing Data**: RTK allows automatic re-fetching and syncing of data when updates (such as saving or deleting) occur, ensuring that the UI reflects the latest state without additional effort.
+
+This integration would enable a smooth and responsive experience for users, with real-time data updates and minimal overhead. This requirement would also have been achieved. `If you have time, create a quick React interface where users can add superheroes and see the sorted list in real-time.`
 
 
 ## Team Collaboration:
