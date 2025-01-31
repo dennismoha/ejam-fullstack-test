@@ -7,6 +7,7 @@ If I had more time, I would:
 - Add github hooks to make sure tests, linting, style issues etc are correct before pushing to prod
 - add PM2 for scaling the processes incase the application grows bigger.
 - Expand the application, add more features. the application is written in a feature based style so adding new features can be easier
+- would have added a release branch and added that to our ci/cd to track the release versions
 
 
 ## Team Collaboration:
@@ -163,5 +164,29 @@ To access the API documentation:
 - Go to: [http://localhost:8081/api-docs/#/](http://localhost:8081/api-docs/#/)
 
 This will open the Swagger UI, where you can see and test all the API endpoints available in your project. Each endpoint is documented with details on the expected input and output, so you can easily test different actions directly from the browser.
+
+
+### **Branching Strategy**
+
+1. **`main` Branch**
+   - The `main` branch is the production-ready branch.
+   - It contains stable, production-quality code and is always deployable.
+   - Only fully-tested, approved features should be merged into `main`.
+
+2. **`develop` Branch**
+   - The `develop` branch is used as the integration branch for all feature development.
+   - It serves as the working branch where features, bug fixes, and enhancements are integrated and tested.
+   - All new features and changes should be merged into `develop` through pull requests (PRs).
+   
+
+3. **Feature Branches (e.g., `feature/<feature-name>`)**
+   - Feature branches are used to develop new features or work on bug fixes.
+   - Each feature branch should branch off from `develop` and be named descriptively based on the feature 
+   - Once a feature is complete, create a pull request to merge it back into `develop`.
+
+4. **Pull Request (PR) Process**
+   - All code should be merged into `develop` via a pull request.
+ 
+
 
 
