@@ -32,7 +32,7 @@ export class Superheroes {
       (a, b) => b.humilityScore - a.humilityScore,
     );
     res
-      .status(StatusCodes.OK)
+      .status(StatusCodes.OK) 
       .send(
         GetSuccessMessage(
           StatusCodes.OK,

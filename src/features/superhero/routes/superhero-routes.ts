@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import { Superheroes } from '@src/features/superhero/controller/superheor-controller';
+import { Superheroes } from '@src/features/superhero/controller/superhero-controller';
 
 class SuperHeroRoutes {
   private router: Router;
