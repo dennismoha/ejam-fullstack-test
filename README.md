@@ -162,6 +162,7 @@ You can test and interact with the APIs using Swagger UI. All available endpoint
 To access the API documentation:
 
 - Go to: [http://localhost:8081/api-docs/#/](http://localhost:8081/api-docs/#/)
+- Go to: [http://localhost:8081/health](check-server-health) 
 
 This will open the Swagger UI, where you can see and test all the API endpoints available in your project. Each endpoint is documented with details on the expected input and output, so you can easily test different actions directly from the browser.
 
