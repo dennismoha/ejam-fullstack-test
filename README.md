@@ -1,3 +1,17 @@
+# ## If I Had More Time:
+If I had more time, I would:
+- Integrate a real database such as MongoDB or PostgreSQL for persistent storage.
+- Set up authentication for the API using JWT so only authorized users can add or view superheroes.
+- Add tests and test coverage, especially writing integration tests to test the full flow from adding superheroes to retrieving them.
+- Add CI/CD using github actions to run tests before production.
+- Add github hooks to make sure tests, linting, style issues etc are correct before pushing to prod
+- add PM2 for scaling the processes incase the application grows bigger.
+- Expand the application, add more features. the application is written in a feature based style so adding new features can be easier
+
+
+## Team Collaboration:
+If I were to collaborate with a teammate, we could break down the work into backend and frontend tasks. One person could handle creating API endpoints and database interactions, while the other builds a UI for managing and displaying superheroes. We could use version control (e.g., GitHub) to track progress and collaborate efficiently.
+
 
 ### **Project Folder Structure Overview**
 
